@@ -1,0 +1,103 @@
+function converts(time){
+    return (time*60);
+}
+
+console.log(converts(5));
+
+
+/////////////
+
+function dividesEvenly(a,b){
+  if(a%b===0)
+   return true;
+  else
+   return false;
+}
+
+console.log(dividesEvenly(98,7));
+
+///////////
+function charCount(str1,str2 ){
+    return str1.split(str2).length - 1;
+}
+
+console.log(charCount("Chamberofsecrets", "c"));
+
+/////////
+
+function addUp(num){
+  var sum=0,start=0;
+  while(start<=num)
+  {
+    sum=sum+start;
+    start++;
+  }
+  return sum;
+}
+
+console.log(addUp(600));
+
+/////////
+function LetterChanges(text) {
+    var s = text.split('');
+    for (var i = 0; i < s.length; i++) {
+        switch(s[i]) {
+          case 'a':
+            s[i] = '1';
+            break;
+          case 'e':     
+            s[i] = '2';
+            break;
+          case 'i':     
+            s[i] = '3';
+            break;
+          case 'o':     
+            s[i] = '4';
+            break;
+          case 'u':     
+            s[i] = '5';
+            break;
+          default:
+        }
+    }
+     return s.join('');
+}
+
+console.log(LetterChanges("chembur"));
+
+////////
+function Testjackpot(array){
+var result = true;
+var j=1;
+for (let i = 0; i < array.length-1; i++) {
+    if (array[i]!==array[j]) {
+        result = false
+        break;
+    }
+    j++;
+}
+return result;
+}
+console.log(Testjackpot(["Ss","Ss","Ss","Ss"]));
+
+//////
+function unique(array) {
+   return Array.from(new Set(array));
+}
+
+console.log(unique([0,1,0,1]))
+
+/////
+function Realtype(a){
+   var toString = Object.prototype.toString;
+   return(toString.call(a));
+}
+
+console.log(Realtype([]));
+console.log(Realtype(5));
+console.log(Realtype(true));
+console.log(Realtype("a"));
+console.log(Realtype(null));
+
+///////
+
